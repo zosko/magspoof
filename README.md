@@ -8,6 +8,6 @@ Components:
 
 ![scheme](scheme.png)
 
-![photo](photo.jpg)
+![pcb](pcb.png)
 
 Original: https://github.com/samyk/magspoof
