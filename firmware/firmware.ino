@@ -146,25 +146,22 @@ void storeRevTrack(int track) {
 
 void setup() {
   Serial.begin(9600);
-  Serial1.begin(9600);
   
+  pinMode(LED_BUILTIN, OUTPUT);
   pinMode(PIN_A, OUTPUT);
   pinMode(PIN_B, OUTPUT);
   pinMode(ENABLE_PIN, OUTPUT);
-  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_PIN, INPUT);
 
   // store reverse track 2 to play later
   storeRevTrack(2);
 }
 void loop() {
-  while (digitalRead(BUTTON_PIN) == LOW) {
+  while (digitalRead(BUTTON_PIN) == HIGH) {
     Serial.println("EMULATE CARD");
-    TXLED1;
-    RXLED1;
+    digitalWrite(LED_BUILTIN,HIGH);
     playTrack(1 + (curTrack++ % 2));
     delay(1000);
   }
-  TXLED0;
-  RXLED0;
-
+  digitalWrite(LED_BUILTIN, LOW);
 }
