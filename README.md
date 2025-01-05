@@ -1,9 +1,9 @@
-# magspoof with Arduino Pro Micro
+# magspoof with Arduino Nano
 Arduino magnetic card emulator track 1 and track 2
 
 Components:
 - L293D
-- Arduino Pro Micro
+- Arduino Nano
 - COIL from 24awg wire, ~50 turns on 3cm diametar
 
 ![scheme](scheme.png)
